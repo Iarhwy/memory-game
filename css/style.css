@@ -1,0 +1,113 @@
+html {
+   box-sizing: border-box;
+}
+
+*,
+*::before,
+**::after {
+   box-sizing: inherit;
+}
+
+* {
+   color: inherit;
+   text-decoration: none;
+}
+
+img {
+   max-width: 100%;
+}
+
+body {
+   font-family: Arial, Verdana, sans-serif;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+   margin: 0;
+   padding: 0;
+}
+
+h1 {
+   margin-bottom: 30px;
+}
+
+.container {
+   max-width: 900px;
+   padding: 80px 15px;
+   margin: 0 auto;
+   text-align: center;
+}
+
+.game {
+   gap: 30px;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 160px;
+   color: transparent;
+   font-size: 45px;
+   font-weight: bold;
+   border-radius: 10px;
+   background-color: rgb(182, 133, 228);
+   background-image: url('../img/backOfCards.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   box-shadow: 2px 4px 6px black;
+   transition: background-image .3s ease-in-out, transform .3s ease-in-out;
+   cursor: pointer;
+}
+
+.card:hover {
+   transform: scale(1.1);
+}
+
+.card.open {
+   transform: scale(1.1);
+   background-image: unset;
+   background-color: rgb(75 121 251 / 62%);
+   color: black;
+   cursor: auto;
+}
+
+.card:hover.open {
+   transform: scale(1.1);
+}
+
+.card.success {
+   background-color: rgb(24 167 24 / 82%);
+   color: white;
+   transform: rotate(5deg);
+}
+
+.card:hover.success {
+   transform: rotate(5deg);
+}
+
+.btn {
+   display: none;
+   width: 250px;
+    height: 60px;
+    margin-bottom: 50px;
+    background-color: bisque;
+    color: black;
+    font-size: 25px;
+    padding: 10px 20px;
+    border: 2px solid #444001;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+}
+
+.btn:hover {
+   background-color: rgb(216, 193, 164);
+}
